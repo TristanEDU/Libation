@@ -1,0 +1,17 @@
+services:
+  libation-webui:
+    build:
+      context: ..
+      dockerfile: Docker/webui/Dockerfile
+    image: libation-webui:local
+    container_name: libation-webui
+    ports:
+      - "6080:6080"
+    environment:
+      # Optional: require a password in the noVNC client before connecting.
+      # - WEBUI_VNC_PASSWORD=change-me
+      - LIBATION_HOME=/config
+    volumes:
+      - ./config:/config
+      - ./books:/data
+    restart: unless-stopped

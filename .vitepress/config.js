@@ -57,6 +57,7 @@ export default defineConfig({
           { text: "Linux", link: "/docs/installation/linux" },
           { text: "Mac", link: "/docs/installation/mac" },
           { text: "Docker", link: "/docs/installation/docker" },
+          { text: "Headless Web UI", link: "/docs/installation/headless-web-ui" },
         ],
       },
       {
